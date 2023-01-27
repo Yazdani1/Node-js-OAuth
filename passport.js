@@ -26,7 +26,6 @@ passport.use(
                 googleId: profile.id,
                 name: profile.displayName,
                 email: profile.emails[0].value,
-                // teamname: req.body.teamname // add this line to store the teamname from the request
               });
               await user.save();
             }

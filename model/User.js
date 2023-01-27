@@ -17,6 +17,10 @@ var userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  teamname:{
+    type: String,
+    required: true,
+  },
 
   role: {
     type: String,

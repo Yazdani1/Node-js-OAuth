@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const passport = require("passport");
+const jwt = require('jsonwebtoken');
 
 const CLIENT_URL = "http://localhost:3000/dashboard";
 
@@ -8,6 +9,7 @@ router.get("/login/success", (req, res) => {
     res.status(200).json({
    
       user: req.user,
+      token: req.token
       //   cookies: req.cookies
     });
   }
@@ -34,7 +36,9 @@ router.get(
   passport.authenticate("google", {
     successRedirect: "http://localhost:3000",
     failureRedirect: "/login/failed",
-  })
+  }),
+
+
 );
 
 

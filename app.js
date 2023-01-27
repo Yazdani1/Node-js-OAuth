@@ -9,8 +9,6 @@ const passport = require("passport");
 const passportSetup = require("./passport");
 const passportSignin = require("./passportSignIn");
 
-
-
 require("./model/db");
 
 
