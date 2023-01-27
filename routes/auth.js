@@ -34,7 +34,7 @@ router.get("/google", passport.authenticate("google", { scope: ["openid","profil
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:3000",
+    successRedirect: CLIENT_URL,
     failureRedirect: "/login/failed",
   }),
 
