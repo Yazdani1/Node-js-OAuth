@@ -5,13 +5,16 @@ const jwt = require('jsonwebtoken');
 const CLIENT_URL = "http://localhost:3000/dashboard";
 
 router.get("/login/success", (req, res) => {
+   // Generate a JWT containing the user's ID
+
   if (req.user) {
+    const tokenss= jwt.sign({ id: req.user }, "dfsfds");
+
     res.status(200).json({
-   
       user: req.user,
-      token: req.token
-      //   cookies: req.cookies
+      token: tokenss
     });
+    
   }
 });
 
