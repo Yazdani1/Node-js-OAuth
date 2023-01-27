@@ -8,13 +8,14 @@ router.get("/login/success", (req, res) => {
    // Generate a JWT containing the user's ID
 
   if (req.user) {
+    // To generate the token and when user login then can store this token in the local storage
     const tokenss= jwt.sign({ id: req.user }, "dfsfds");
 
     res.status(200).json({
       user: req.user,
       token: tokenss
     });
-    
+
   }
 });
 
