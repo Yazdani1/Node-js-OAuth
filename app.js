@@ -40,6 +40,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/auth",require("./routes/auth"));
 app.use("/auth",require("./routes/user"));
 app.use("/auth",require("./routes/authSignIn"));
+app.use("/api",require("./routes/post"));
 
 // app.use("/api",require("./router/ExpenseCategory"));
 // app.use("/api",require("./router/ExpenseList"));
