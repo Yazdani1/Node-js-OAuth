@@ -12,6 +12,12 @@ exports.requireLogin = (req, res, next) => {
       //aatach tokemnn
       req.user = decode;
       next();
+
+
+
+
+
+
     } else {
       return res.status(400).json({ error: "Unauthorized Dont have access" });
     }

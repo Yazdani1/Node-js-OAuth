@@ -16,7 +16,7 @@ exports.createPost = async(req,res)=>{
 
       const postDetails = Post({
         title,
-        postedBy: req.user,
+        postedBy: req.user._id,
       });
   
       const savePost = await Post.create(postDetails);

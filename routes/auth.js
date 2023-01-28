@@ -13,7 +13,7 @@ router.get("/login/success", (req, res) => {
   });
   if (req.user) {
     // To generate the token and when user login then can store this token in the local storage
- 
+
     res.status(200).json({
       user: req.user,
       token: token
