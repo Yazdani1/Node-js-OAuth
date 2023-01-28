@@ -6,6 +6,8 @@ const CLIENT_URL = "http://localhost:3000/dashboard";
 
 router.get("/login/success", (req, res) => {
    // Generate a JWT containing the user's ID
+       // To generate the token and when user login then can store this token in the local storage
+
    const token = jwt.sign({ _id: req.user._id }, process.env.JWT_SECRET, {
     expiresIn: "24h",
   });
